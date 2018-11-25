@@ -1,0 +1,30 @@
+.work {
+  display: flex;
+
+  &__img {
+    flex-grow: 2;
+    background: url(../img/content/1.jpg) 50% 50% no-repeat;
+    background-size: auto, cover;
+  }
+
+  &__article {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    background-color: $bg-work;
+  }
+
+  &__container {
+    padding: 0 50px;
+
+    &.work__container--icon {
+      background: url(../img/icon/3.png) 50% 0px no-repeat;
+    }
+  }
+
+  &__title {
+    margin-top: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+}

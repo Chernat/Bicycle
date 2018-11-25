@@ -1,0 +1,15 @@
+.about-us {
+  margin: 50px auto;
+  max-width: 900px;
+  background: url(../img/icon/1.png) 50% 0 no-repeat;
+
+  &__header {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  &__text {
+    text-align: center;
+  }
+}

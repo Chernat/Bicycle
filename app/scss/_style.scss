@@ -1,0 +1,28 @@
+body {
+  background-color: $bg-color;
+}
+
+h2 {
+  font-size: 18px;
+  color: $header-color;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  color: $text-color;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: $header-color;
+  transition: color .2s linear;
+  &:hover {
+    color: $main-color;
+  }
+}

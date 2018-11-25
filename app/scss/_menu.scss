@@ -1,0 +1,36 @@
+.menu {
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 14px;
+    color: $header-color;
+
+    list-style: none;
+
+    padding: 20px 0;
+  }
+
+  &__item {
+    margin: 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    &--dot {
+      position: relative;
+
+      &:before {
+        content: '.';
+      }
+    }
+
+    &--logo {
+      background: url(../img/bg/logo.png) 50% 50% no-repeat;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

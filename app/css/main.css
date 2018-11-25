@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Lato, sans-serif; }
+
+body {
+  background-color: #f7f7f7; }
+
+h2 {
+  font-size: 18px;
+  color: #4d4959;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center; }
+
+p {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  color: #848789;
+  line-height: 1.8; }
+
+a {
+  text-decoration: none;
+  color: #4d4959;
+  -webkit-transition: color .2s linear;
+  -o-transition: color .2s linear;
+  transition: color .2s linear; }
+  a:hover {
+    color: #64c29e; }
+
+.section-header {
+  background: url(../img/bg/header-bg.jpg) 50% 50% no-repeat;
+  height: 100vh; }
+
+.menu__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #4d4959;
+  list-style: none;
+  padding: 20px 0; }
+
+.menu__item {
+  margin: 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+  .menu__item--dot {
+    position: relative; }
+    .menu__item--dot:before {
+      content: '.'; }
+  .menu__item--logo {
+    background: url(../img/bg/logo.png) 50% 50% no-repeat;
+    width: 100px;
+    height: 100px; }
+
+.about-us {
+  margin: 50px auto;
+  max-width: 900px;
+  background: url(../img/icon/1.png) 50% 0 no-repeat; }
+  .about-us__header {
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 20px; }
+  .about-us__text {
+    text-align: center; }
+
+.work {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .work__img {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+    background: url(../img/content/1.jpg) 50% 50% no-repeat;
+    -webkit-background-size: auto, cover;
+    background-size: auto, cover; }
+  .work__article {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 0;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    background-color: #fff; }
+  .work__container {
+    padding: 0 50px; }
+    .work__container.work__container--icon {
+      background: url(../img/icon/3.png) 50% 0px no-repeat; }
+  .work__title {
+    margin-top: 90px;
+    padding-bottom: 20px;
+    text-align: center; }
