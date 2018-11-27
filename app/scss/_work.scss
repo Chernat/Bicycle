@@ -1,7 +1,8 @@
 .work {
+  height: 500px;
   display: flex;
 
-  &__img {
+  &__img--first {
     position: relative;
     background: url(../img/content/1.jpg) 50% 50% no-repeat;
     background-size: cover ;
@@ -17,21 +18,58 @@
       height: 200px;
     }
   }
+  &__img--second {
+    position: relative;
+    background: url(../img/content/3.png) 50% 50% no-repeat;
+    background-size: cover ;
+    flex-grow: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/icon/5.png) 50% 50% no-repeat;
+      width: 200px;
+      height: 200px;
+      }
+  }
+
+  &__img--third {
+    position: relative;
+    background: url(../img/content/6.png) 50% 50% no-repeat;
+    background-size: cover ;
+    flex-grow: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url(../img/icon/6.png) 50% 50% no-repeat;
+      width: 200px;
+      height: 200px;
+      }
+  }
+  &__img--fourth {
+    position: relative;
+    background: url(../img/content/5.png) 50% 50% no-repeat;
+    background-size: cover ;
+    flex-grow: 1;
+  }
 
   &__article {
     position: relative;
     flex-basis: calc(100%/3);
-    background-color: $bg-work;
   }
 
   &__container {
     position: relative;
-    max-height: 400px;
-    padding: 40px 40px 100px 40px;
-
-    &.work__container--icon {
-      background: url(../img/icon/3.png) 50% 40px no-repeat;
-    }
+    background-color: $bg-work;
+    height: 70%;
+    padding: 40px 40px 40px 40px;
+    transition: height .2s linear;
+    z-index: 2;
 
     &::before {
       content: '';
@@ -40,37 +78,66 @@
       bottom: 30px;
       width: 100px;
       height: 1px;
-      background: #ccc;
+      background: darken($bg-color, 10%);
+      border-radius: 10px;
       transform: translate(-50%,-50%);
+      transition: width .2s linear;
     }
 
     &::after {
       content: '';
       position: absolute;
       left: 50%;
-      bottom: -10px;
-      width: 20px;
-      height: 20px;
-      background: $bg-work;
-      transform: rotate(-45deg) translate(-50%,-50%);
+      bottom: -45px;
+      border: 15px solid transparent; /* Прозрачные границы */
+      border-top: 15px solid $bg-work;
+      transform: translate(-50%,-50%);
+      transition: .2s;
     }
 
+    &:hover {
+      height: 90%;
+      & .work__description {
+        height: 300px;
+      }
+      &::after {
+        bottom: -15px;
+        border: 15px solid transparent; /* Прозрачные границы */
+        border-bottom: 15px solid $main-color;
+      }
+      &::before {
+        width: 150px;
+      }
+    }
   }
 
   &__title {
     padding-top: 70px;
     padding-bottom: 20px;
     text-align: center;
+    &.work__title--icon1 {
+      background: url(../img/icon/3.png) center 0 no-repeat;
+    }
+    &.work__title--icon2 {
+      background: url(../img/icon/4.png) center 0 no-repeat;
+    }
+    &.work__title--icon3 {
+      background: url(../img/icon/7.png) center 0 no-repeat;
+    }
   }
 
   &__description {
     text-align: justify;
-    max-height: 200px;
+    height: 130px;
     overflow: hidden;
+    transition: height .2s linear;
   }
 
   &__bt-img {
-    height: auto;
+    position: absolute;
+    bottom: 0;
+    height: 30%;
     width: 100%;
+    z-index: 1;
   }
 }
