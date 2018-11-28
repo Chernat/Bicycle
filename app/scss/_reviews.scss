@@ -1,72 +1,57 @@
+@mixin wh {
+  width: $width;
+  height: $height;
+}
+
+$width: 10px;
+$height: 10px;
+$border-color: #ccc;
+
 input[type="radio"] {
-  display: none;
+display: none;
 }
 
 .reviews {
-  position: relative;
-  min-height: 180px;
-  max-width: 800px;
-  margin: auto;
+  padding: 80px 20px;
 
-  &__label {
-    &::after {
+  &__container {
+    position: relative;
+    height: 100px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  &__switcher {
+
+    &::before {
       content: '';
       position: absolute;
       bottom: 0;
-      width: 10px;
-      height: 10px;
-      background: black;
+      border-radius: $width;
+      border: 1px solid $border-color;
+      @include wh;
     }
 
-    &--one {
-      &::after {
-        left: 50%;
+    &--one::before {
+      left: 47%;
+    }
+
+    &--two::before {
+      left: 50%;
+    }
+
+    &--three::before {
+      left: 53%;
+    }
+  }
+
+  &__radio:checked {
+      & + .reviews__switcher::before {
+        content: '';
+        position: absolute;
+        border-radius: $width;
+        background: $border-color;
+        @include wh;
       }
-    }
-
-    &--two {
-      &::after {
-        left: 47%;
-      }
-    }
-
-    &--three {
-      &::after {
-        left: 53%;
-      }
-    }
   }
-
-  &__name {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    padding: 20px 0;
-  }
-
-  &__time {
-    margin-left: 20px;
-    font-weight: 100;
-  }
-
-  &__blockquote {
-    text-align: center;
-  }
-
-  &__one {
-
-    &--icon1 {
-      background: url(../img/icon/tw.png) center 0 no-repeat;
-      height: 30px;
-    }
-  }
-
-  &__radio--first {
-    &:checked ~ .reviews {
-      &__one {
-        left: -400px;
-      }
-    }
-  }
-
 }

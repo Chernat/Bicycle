@@ -59,23 +59,24 @@
         <div class="work__img work__img--fourth"></div>
       </div>
     </section>
-    <section class="section-reviews container">
-      <div class="reviews">
-        <div class="reviews__one">
-          <div class="reviews__one reviews__one--icon1"></div>
-          <div class="reviews__name">
-            <span>AOD New York @aod </span><span class="reviews__time">/ 35 min</span>
+    <section class="reviews">
+      <div class="reviews__container">
+
+          <input type="radio" id="first-review" name="switcher" class="reviews__radio reviews__radio--one" checked>
+          <label for="first-review" class="reviews__switcher reviews__switcher--one"></label>
+          <input type="radio" id="second-review" name="switcher" class="reviews__radio reviews__radio--two">
+          <label for="second-review" class="reviews__switcher reviews__switcher--two"></label>
+          <input type="radio" id="third-review" name="switcher" class="reviews__radio reviews__radio--three">
+          <label for="third-review" class="reviews__switcher reviews__switcher--three"></label>
+
+        <div class="review review--one">
+          <div class="review__logo"></div>
+          <div class="review__name">
+            <span>AOD New York @aod </span><span class="review__time">/ 35 min</span>
           </div>
-          <blockquote class="reviews__blockquote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</blockquote>
+          <blockquote class="review__blockquote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut tellus ac nulla semper rhoncus. Nullam a odio porttitor, dictum turpis vitae, pretium ante amet.</blockquote>
         </div>
 
-        <input type="radio" name="first-review" class="reviews__radio reviews__radio--first">
-        <input type="radio" name="second-review" class="reviews__radio reviews__radio--second">
-        <input type="radio" name="third-review" class="reviews__radio reviews__radio--third">
-
-        <label for="first-review" class="reviews__label reviews__label--one"></label>
-        <label for="second-review" class="reviews__label reviews__label--two"></label>
-        <label for="third-review" class="reviews__label reviews__label--three"></label>
       </div>
     </section>
     <section class="shop">
