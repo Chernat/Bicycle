@@ -1,0 +1,51 @@
+.links {
+  background-color: $bg-links;
+
+  &__container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 40px;
+  }
+
+  &__btn {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 150ms ease-in-out;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $main-color;
+    padding: 10px 80px;
+    border: 2px solid $main-color;
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 100%;
+      background: $main-color;
+      z-index: -1;
+      transition: width 150ms ease-in-out;
+    }
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      border-color: $main-color;
+      &::after {
+        width: 105%;
+      }
+    }
+
+    &--white {
+      color: #fff;
+      border-color: #fff;
+    }
+  }
+}
