@@ -35,4 +35,6 @@ gulp.task('finished', ['sass'], function() {
   .pipe(gulp.dest('dist/css'))
   gulp.src('app/*.html')
   .pipe(gulp.dest('dist/'))
+  gulp.src('app/img')
+  .pipe(gulp.dest('dist/img'))
 })
