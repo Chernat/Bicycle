@@ -248,32 +248,66 @@ input[type="radio"] {
   padding: 80px 20px; }
   .reviews__container {
     position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
     height: 100px;
     max-width: 900px;
     margin: auto; }
-  .reviews__switcher::before {
-    content: '';
+  .reviews__switcher-container {
     position: absolute;
     bottom: 0;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    width: 10px;
-    height: 10px; }
-  .reviews__switcher--one::before {
-    left: 47%; }
-  .reviews__switcher--two::before {
     left: 50%; }
-  .reviews__switcher--three::before {
-    left: 53%; }
-  .reviews__radio:checked + .reviews__switcher::before {
-    content: '';
-    position: absolute;
+  .reviews__switcher {
+    display: inline-block;
+    border: 1px solid #ccc;
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #ccc;
     width: 10px;
     height: 10px; }
+  .reviews__radio:checked + .reviews__switcher {
+    background: #64c29e;
+    border: 2px solid #64c29e; }
+
+#first-review:checked ~ .review__container .review--one {
+  left: 0; }
+
+#first-review:checked ~ .review__container .review--two {
+  left: 600px; }
+
+#first-review:checked ~ .review__container .review--three {
+  left: 1200px; }
+
+#second-review:checked ~ .review__container .review--one {
+  left: -600px; }
+
+#second-review:checked ~ .review__container .review--two {
+  left: 0; }
+
+#second-review:checked ~ .review__container .review--three {
+  left: 600px; }
+
+#third-review:checked ~ .review__container .review--one {
+  left: -1200px; }
+
+#third-review:checked ~ .review__container .review--two {
+  left: -600px; }
+
+#third-review:checked ~ .review__container .review--three {
+  left: 0; }
+
+.review__container {
+  position: relative;
+  width: 100%;
+  margin: auto; }
+
+.review__slide {
+  position: absolute;
+  width: 100%;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
 
 .shop {
   display: grid;

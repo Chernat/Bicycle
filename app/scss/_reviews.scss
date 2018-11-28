@@ -16,42 +16,95 @@ display: none;
 
   &__container {
     position: relative;
+    display: flex;
     height: 100px;
     max-width: 900px;
     margin: auto;
   }
 
+  &__switcher-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+  }
+
   &__switcher {
+    display: inline-block;
+    border: 1px solid $border-color;
+    border-radius: $width;
+    @include wh;
 
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      border-radius: $width;
-      border: 1px solid $border-color;
-      @include wh;
-    }
-
-    &--one::before {
-      left: 47%;
-    }
-
-    &--two::before {
-      left: 50%;
-    }
-
-    &--three::before {
-      left: 53%;
-    }
   }
 
   &__radio:checked {
-      & + .reviews__switcher::before {
-        content: '';
-        position: absolute;
-        border-radius: $width;
-        background: $border-color;
-        @include wh;
+      & + .reviews__switcher{
+        background: $main-color;
+        border: 2px solid $main-color;
       }
   }
+}
+
+#first-review {
+    &:checked {
+      & ~ .review__container .review--one {
+        left: 0;
+      }
+
+      & ~ .review__container .review--two {
+        left: 600px;
+      }
+
+      & ~ .review__container .review--three {
+        left: 1200px;
+      }
+    }
+}
+
+#second-review {
+    &:checked {
+      & ~ .review__container .review--one {
+        left: -600px;
+      }
+
+      & ~ .review__container .review--two {
+        left: 0;
+      }
+
+      & ~ .review__container .review--three {
+        left: 600px;
+      }
+    }
+}
+
+#third-review {
+    &:checked {
+      & ~ .review__container .review--one {
+        left: -1200px;
+      }
+
+      & ~ .review__container .review--two {
+        left: -600px;
+      }
+
+      & ~ .review__container .review--three {
+        left: 0;
+      }
+    }
+}
+
+.review {
+
+  &__container {
+    position: relative;
+    width: 100%;
+    margin: auto;
+  }
+
+  &__slide {
+    position: absolute;
+    width: 100%;
+    transition: .5s;
+  }
+
+
 }
