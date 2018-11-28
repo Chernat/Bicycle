@@ -1,5 +1,12 @@
 .about-us {
-  background: url(../img/icon/1.png) 50% 0 no-repeat;
+  position: relative;
+  background: $bg-color;
+  z-index: 1;
+  @include padding($about-us-padding-tb, $about-us-padding-rl);
+
+  &__container {
+    background: url(../img/icon/1.png) 50% 0 no-repeat;
+  }
 
   &__header {
     text-align: center;

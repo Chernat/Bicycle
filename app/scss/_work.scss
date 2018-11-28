@@ -2,9 +2,8 @@
   height: 500px;
   display: flex;
 
-  &__img--first {
+  &__img {
     position: relative;
-    background: url(../img/content/1.jpg) 50% 50% no-repeat;
     background-size: cover ;
     flex-grow: 1;
     &::after {
@@ -13,49 +12,34 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: url(../img/icon/2.png) 50% 50% no-repeat;
       width: 200px;
       height: 200px;
     }
-  }
-  &__img--second {
-    position: relative;
-    background: url(../img/content/3.png) 50% 50% no-repeat;
-    background-size: cover ;
-    flex-grow: 1;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: url(../img/icon/5.png) 50% 50% no-repeat;
-      width: 200px;
-      height: 200px;
-      }
-  }
 
-  &__img--third {
-    position: relative;
-    background: url(../img/content/6.png) 50% 50% no-repeat;
-    background-size: cover ;
-    flex-grow: 1;
-    &::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: url(../img/icon/6.png) 50% 50% no-repeat;
-      width: 200px;
-      height: 200px;
+      &--first {
+        background: url(../img/content/1.jpg) 50% 50% no-repeat;
+        &::after {
+          background: url(../img/icon/2.png) 50% 50% no-repeat;
+        }
       }
-  }
-  &__img--fourth {
-    position: relative;
-    background: url(../img/content/5.png) 50% 50% no-repeat;
-    background-size: cover ;
-    flex-grow: 1;
+
+      &--second {
+        background: url(../img/content/3.png) 50% 50% no-repeat;
+        &::after {
+          background: url(../img/icon/5.png) 50% 50% no-repeat;
+        }
+      }
+
+      &--third  {
+        background: url(../img/content/6.png) 50% 50% no-repeat;
+        &::after {
+          background: url(../img/icon/6.png) 50% 50% no-repeat;
+        }
+      }
+
+      &--fourth {
+        background: url(../img/content/5.png) 50% 50% no-repeat
+      }
   }
 
   &__article {
@@ -67,9 +51,9 @@
     position: relative;
     background-color: $bg-work;
     height: 70%;
-    padding: 40px 40px 40px 40px;
     transition: height .2s linear;
     z-index: 2;
+    @include padding(40px, 40px)
 
     &::before {
       content: '';
@@ -136,8 +120,59 @@
   &__bt-img {
     position: absolute;
     bottom: 0;
-    height: 30%;
-    width: 100%;
     z-index: 1;
+    width: 100%;
+    padding-top: 150px;
+
+    &--seat-red {
+      background: url(../img/content/2.jpg) center center no-repeat;
+      background-size: cover;
+    }
+
+    &--seat-black {
+      background: url(../img/content/4.png) center center no-repeat;
+      background-size: cover;
+    }
+
+    &--frame {
+      background: url(../img/content/7.png) center center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1180px) {
+
+  .work {
+    &__container {
+      &:hover {
+        height: 100%;
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  .work {
+    &__article {
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+
+    &__img {
+      &--fourth {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .work {
+    &__img {
+      display: none;
+    }
   }
 }

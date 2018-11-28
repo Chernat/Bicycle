@@ -18,6 +18,10 @@ p {
   line-height: 1.8;
 }
 
+blockquote {
+  color: $text-color;
+}
+
 a {
   text-decoration: none;
   color: $header-color;
@@ -25,9 +29,4 @@ a {
   &:hover {
     color: $main-color;
   }
-}
-
-.container {
-  margin: 100px auto;
-  max-width: 900px;
 }

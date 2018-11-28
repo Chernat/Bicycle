@@ -1,4 +1,5 @@
 .links {
+  position: relative;
   background-color: $bg-links;
 
   &__container {
@@ -12,6 +13,7 @@
   &__btn {
     position: relative;
     overflow: hidden;
+    text-align: center;
     z-index: 1;
     transition: color 150ms ease-in-out;
     font-size: 18px;
@@ -48,4 +50,46 @@
       border-color: #fff;
     }
   }
+}
+
+@media screen and (max-width: 990px) {
+
+  .links {
+
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__btn {
+      width: 45%;
+
+      &--white {
+        order: 1;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 690px) {
+
+  .links {
+
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__btn {
+      width: 100%;
+      margin-top: 20px;
+
+      &--white {
+        order: 0;
+      }
+    }
+  }
+
 }

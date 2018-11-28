@@ -1,38 +1,44 @@
-@mixin wh {
-  width: $width;
-  height: $height;
-}
-
-$width: 10px;
-$height: 10px;
-$border-color: #ccc;
-
 input[type="radio"] {
 display: none;
 }
 
 .reviews {
-  padding: 80px 20px;
+  position: relative;
+  margin: auto;
+  padding: 100px ((100 - $rev-cont-width) / 2);
+  background: $bg-color;
 
   &__container {
     position: relative;
     display: flex;
-    height: 100px;
-    max-width: 900px;
+    height: $rev-height;
     margin: auto;
   }
 
-  &__switcher-container {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-  }
-
   &__switcher {
-    display: inline-block;
-    border: 1px solid $border-color;
-    border-radius: $width;
-    @include wh;
+    position: absolute;
+    bottom: -20px;
+    border: 1px solid $switcher-border-color;
+    border-radius: $switcher-width;
+    @include width-height($switcher-width, $switcher-height);
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--one {
+      left: calc(50% - 20px);
+      transform: translate(-50%, -50%);
+    }
+
+    &--two {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &--three {
+      left: calc(50% + 20px);
+      transform: translate(-50%, -50%);
+    }
 
   }
 
@@ -46,65 +52,110 @@ display: none;
 
 #first-review {
     &:checked {
-      & ~ .review__container .review--one {
+      & ~ .review .review--one {
         left: 0;
       }
 
-      & ~ .review__container .review--two {
-        left: 600px;
+      & ~ .review .review--two {
+        left: $rev-cont-width;
       }
 
-      & ~ .review__container .review--three {
-        left: 1200px;
+      & ~ .review .review--three {
+        left: $rev-cont-width * 2;
       }
     }
 }
 
 #second-review {
     &:checked {
-      & ~ .review__container .review--one {
-        left: -600px;
+      & ~ .review .review--one {
+        left: -$rev-cont-width;
       }
 
-      & ~ .review__container .review--two {
+      & ~ .review .review--two {
         left: 0;
       }
 
-      & ~ .review__container .review--three {
-        left: 600px;
+      & ~ .review .review--three {
+        left: $rev-cont-width;
       }
     }
 }
 
 #third-review {
     &:checked {
-      & ~ .review__container .review--one {
-        left: -1200px;
+      & ~ .review .review--one {
+        left: -$rev-cont-width * 2;
       }
 
-      & ~ .review__container .review--two {
-        left: -600px;
+      & ~ .review .review--two {
+        left: -$rev-cont-width;
       }
 
-      & ~ .review__container .review--three {
+      & ~ .review .review--three {
         left: 0;
       }
     }
 }
 
 .review {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: $rev-cont-width;
 
-  &__container {
-    position: relative;
-    width: 100%;
-    margin: auto;
-  }
 
   &__slide {
     position: absolute;
     width: 100%;
+    padding-top: 40px;
+    text-align: center;
     transition: .5s;
   }
 
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__time {
+    font-weight: 300;
+    font-size: 18px;
+    color: $text-color;
+    margin-left: 10px;
+  }
+
+  &--one {
+    background: url(../img/icon/tw.png) center 0 no-repeat;
+  }
+
+  &--two {
+    background: url(../img/icon/tw.png) center 0 no-repeat;
+  }
+
+  &--three {
+    background: url(../img/icon/tw.png) center 0 no-repeat;
+  }
+}
+
+
+@media screen and (max-width: 695px) {
+
+  .reviews {
+    &__container {
+      height: 200px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+
+  .reviews {
+    &__container {
+      height: 240px;
+    }
+  }
 
 }

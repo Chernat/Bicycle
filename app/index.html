@@ -7,21 +7,21 @@
     <title>Bicycle</title>
   </head>
   <body>
-    <header class="section-header">
+    <header class="header">
         <nav class="menu">
           <ul class="menu__list">
             <li class="menu__item"><a href="#about_us">About us</a></li>
             <li class="menu__item menu__item--dot"></li>
             <li class="menu__item"><a href="#work">Work</a></li>
-            <a href="/"><li class="menu__item menu__item--logo"></li></a>
+            <a class="menu__item menu__item--logo" href="/"></a>
             <li class="menu__item"><a href="#shop">Shop</a></li>
             <li class="menu__item menu__item--dot"></li>
             <li class="menu__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
     </header>
-    <section class="section-about-us container" id="about_us">
-      <div class="about-us">
+    <section class="about-us" id="about_us">
+      <div class="about-us__container">
         <h2 class="about-us__header">A NEW GENERATION OF VINTAGE BIKE</h2>
         <p class="about-us__text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
       </div>
@@ -34,7 +34,7 @@
             <h2 class="work__title work__title--icon1">vintage Oliva</h2>
             <p class="work__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
           </div>
-            <img class="work__bt-img" src="img/content/2.jpg" alt="vintage Oliva" width="533px" height="200px">
+          <div class="work__bt-img work__bt-img--seat-red"></div>
         </div>
       </div>
       <div class="work">
@@ -43,8 +43,7 @@
             <h2 class="work__title work__title--icon2">LA BORIOSA</h2>
             <p class="work__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
           </div>
-            <img class="work__bt-img" src="img/content/4.png" alt="LA BORIOSA" width="533px" height="200px">
-        </div>
+          <div class="work__bt-img work__bt-img--seat-black"></div>        </div>
         <div class="work__img work__img--second"></div>
       </div>
       <div class="work">
@@ -54,25 +53,21 @@
             <h2 class="work__title work__title--icon3">RETRO BIKE - M. HULOT</h2>
             <p class="work__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
           </div>
-            <img class="work__bt-img" src="img/content/7.png" alt="RETRO BIKE - M. HULOT" width="533px" height="200px">
+          <div class="work__bt-img work__bt-img--frame"></div>
         </div>
         <div class="work__img work__img--fourth"></div>
       </div>
     </section>
     <section class="reviews">
       <div class="reviews__container">
-
           <input type="radio" id="first-review" name="switcher" class="reviews__radio reviews__radio--one" checked>
           <label for="first-review" class="reviews__switcher reviews__switcher--one"></label>
           <input type="radio" id="second-review" name="switcher" class="reviews__radio reviews__radio--two">
           <label for="second-review" class="reviews__switcher reviews__switcher--two"></label>
           <input type="radio" id="third-review" name="switcher" class="reviews__radio reviews__radio--three">
           <label for="third-review" class="reviews__switcher reviews__switcher--three"></label>
-
-
-        <div class="review__container">
+        <div class="review">
           <div class="review__slide review--one">
-            <div class="review__logo"></div>
             <div class="review__name">
               <span>AOD New York @aod </span><span class="review__time">/ 35 min</span>
             </div>
@@ -80,7 +75,6 @@
           </div>
 
           <div class="review__slide review--two">
-            <div class="review__logo"></div>
             <div class="review__name">
               <span>Kolk @aod </span><span class="review__time">/ 35 min</span>
             </div>
@@ -88,7 +82,6 @@
           </div>
 
           <div class="review__slide review--three">
-            <div class="review__logo"></div>
             <div class="review__name">
               <span>AOD New York @aod </span><span class="review__time">/ 35 min</span>
             </div>
@@ -99,7 +92,7 @@
 
       </div>
     </section>
-    <section class="shop">
+    <section class="shop" id="shop">
       <a href="/" class="shop__item shop__item--1"></a>
       <a href="/" class="shop__item shop__item--2"></a>
       <a href="/" class="shop__item shop__item--3"></a>
@@ -116,7 +109,7 @@
         <a class="links__btn">contact us</a>
       </div>
     </section>
-    <section class="form">
+    <section class="form" id="contact">
       <div class="form__container">
         <form class="form__email" action="https://echo.htmlacademy.ru" method="post">
           <label for="email" class="form__label">Stay on the saddle!</label>
