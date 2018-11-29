@@ -56,7 +56,6 @@ a:hover {
 }
 
 .header {
-  position: relative;
   background: url(../img/bg/header-bg.jpg) center center no-repeat fixed;
   background-attachment: fixed;
   background-size: cover;
