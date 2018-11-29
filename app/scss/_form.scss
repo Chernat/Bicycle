@@ -1,6 +1,6 @@
-.form {
+.contact {
   position: relative;
-  background-color: #fff;
+  background-color: $bg-work;
   padding: 40px 40px;
 
   &__container {
@@ -14,7 +14,7 @@
     margin-bottom: 30px;
     font-size: 24px;
     font-style: italic;
-    color: #848789;
+    color: $form-label-color;
   }
 
   &__email {
@@ -25,14 +25,14 @@
     padding: 20px;
     font-size: 18px;
     line-height: 22px;
-    border: 1px solid #ccc;
+    border: 1px solid $form-border-color;
   }
 
   &__btn {
     background: $main-color;
     font-size: 18px;
     line-height: 22px;
-    color: #fff;
+    color: $form-btn-color;
     text-transform: uppercase;
     padding: 17px;
     border: 4px solid $main-color;

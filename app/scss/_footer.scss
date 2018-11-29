@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  background: $bg-color;
   @include padding ($footer-padding-tb, $footer-padding-rl);
 
   &__container {
@@ -67,9 +69,7 @@
 }
 
 @media screen and (max-width:590px) {
-
   .footer {
-
     &__container {
       flex-direction: column;
     }
@@ -91,5 +91,4 @@
       justify-content: center;
     }
   }
-
 }

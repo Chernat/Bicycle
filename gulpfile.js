@@ -1,15 +1,15 @@
 var gulp = require('gulp'),
-    sass = require('gulp-sass'),
-    browserSync = require('browser-sync'),
-    autoprefixer = require('gulp-autoprefixer'),
-    plumber = require('gulp-plumber');
+  sass = require('gulp-sass'),
+  browserSync = require('browser-sync'),
+  autoprefixer = require('gulp-autoprefixer'),
+  plumber = require('gulp-plumber');
 
 gulp.task('sass', function () {
   return gulp.src('app/scss/*.+(sass|scss)')
   .pipe(plumber())
-  .pipe(sass())
+  .pipe(sass({outputStyle: 'expanded'}))
   .pipe(autoprefixer({
-      browsers: ['last 20 versions'],
+      browsers: ['> 1%', 'last 2 Chrome versions', 'Firefox ESR'],
       cascade: false
     }))
   .pipe(gulp.dest('app/css'))

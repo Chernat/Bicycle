@@ -23,15 +23,12 @@
     &--dot {
       position: relative;
 
-      &:before {
+      &:after {
         content: '.';
+        position: relative;
+        bottom: 0;
+        right: -20px;
       }
-    }
-
-    &--logo {
-      background: url(../img/bg/logo.png) 50% 50% no-repeat;
-      width: 100px;
-      height: 100px;
     }
   }
 }
@@ -41,7 +38,9 @@
   .menu {
     &__item {
       &--dot {
-        display: none
+        &:after {
+          display: none;
+        }
       }
     }
   }
@@ -52,6 +51,7 @@
   .menu {
     &__list {
       flex-direction: column;
+      background: radial-gradient(at center, #fff, transparent);
     }
 
     &__item {
