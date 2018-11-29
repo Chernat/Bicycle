@@ -6,6 +6,8 @@
 /* about-us end */
 /* reviews */
 /* reviews end */
+/* footer */
+/* footer end */
 * {
   margin: 0;
   padding: 0;
@@ -48,6 +50,7 @@ a {
 .header {
   position: relative;
   background: url(../img/bg/header-bg.jpg) center center no-repeat fixed;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   background-size: cover;
   height: 100vh; }
@@ -619,7 +622,10 @@ input[type="radio"] {
       color: #64c29e; }
 
 .footer {
-  padding: 40px 20px; }
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px; }
   .footer__container {
     display: -webkit-box;
     display: -webkit-flex;
@@ -657,8 +663,14 @@ input[type="radio"] {
     width: -webkit-calc(100%/3);
     width: calc(100%/3); }
     .footer__social-link {
+      opacity: 0.8;
       width: 36px;
       height: 34px; }
+      .footer__social-link:hover {
+        opacity: 1;
+        -webkit-transform: scale(1.02);
+        -ms-transform: scale(1.02);
+        transform: scale(1.02); }
       .footer__social-link:not(:last-child) {
         margin-right: 5px; }
       .footer__social-link--tw {
