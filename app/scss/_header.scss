@@ -1,5 +1,6 @@
 .header {
-  background: url(../img/bg/header-bg.jpg) center top no-repeat fixed;
+  background: url(../img/bg/header-bg.jpg) center top no-repeat;
+  background-attachment: fixed !important;
   background-size: cover;
   height: 100vh;
 }
