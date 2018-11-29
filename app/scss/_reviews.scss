@@ -51,15 +51,15 @@ display: none;
 
 #first-review {
     &:checked {
-      & ~ .review .review--one {
+      & ~ .review .review__slide--one {
         left: 0;
       }
 
-      & ~ .review .review--two {
+      & ~ .review .review__slide--two {
         left: $rev-cont-width;
       }
 
-      & ~ .review .review--three {
+      & ~ .review .review__slide--three {
         left: $rev-cont-width * 2;
       }
     }
@@ -67,15 +67,15 @@ display: none;
 
 #second-review {
     &:checked {
-      & ~ .review .review--one {
+      & ~ .review .review__slide--one {
         left: -$rev-cont-width;
       }
 
-      & ~ .review .review--two {
+      & ~ .review .review__slide--two {
         left: 0;
       }
 
-      & ~ .review .review--three {
+      & ~ .review .review__slide--three {
         left: $rev-cont-width;
       }
     }
@@ -83,15 +83,15 @@ display: none;
 
 #third-review {
     &:checked {
-      & ~ .review .review--one {
+      & ~ .review .review__slide--one {
         left: -$rev-cont-width * 2;
       }
 
-      & ~ .review .review--two {
+      & ~ .review .review__slide--two {
         left: -$rev-cont-width;
       }
 
-      & ~ .review .review--three {
+      & ~ .review .review__slide--three {
         left: 0;
       }
     }

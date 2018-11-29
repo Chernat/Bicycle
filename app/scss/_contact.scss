@@ -36,10 +36,24 @@
     text-transform: uppercase;
     padding: 17px;
     border: 4px solid $main-color;
+    transition: all 0.5s;
     &:hover {
       cursor: pointer;
       background: none;
       color: $main-color;
+    }
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .contact {
+    &__input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    &__btn {
+      width: 100%;
     }
   }
 }

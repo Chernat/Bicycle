@@ -53,7 +53,7 @@
     height: 70%;
     transition: height .2s linear;
     z-index: 2;
-    @include padding(40px, 40px)
+    @include padding(40px, 40px);
 
     &::before {
       content: '';
