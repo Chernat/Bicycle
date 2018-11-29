@@ -1,5 +1,5 @@
 .footer {
-  padding: 40px 20px;
+  @include padding ($footer-padding-tb, $footer-padding-rl);
 
   &__container {
     display: flex;
@@ -29,8 +29,12 @@
     justify-content: center;
     width: calc(100%/3);
     &-link {
-      width: 36px;
-      height: 34px;
+      opacity: 0.8;
+      @include width-height($footer-width, $footer-height);
+      &:hover {
+        opacity: 1;
+        transform: scale(1.02);
+      }
 
       &:not(:last-child) {
         margin-right: 5px;
