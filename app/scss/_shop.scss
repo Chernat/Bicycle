@@ -6,28 +6,38 @@
 
   &__item {
   position: relative;
+  transition: 5s;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $main-color;
+    transition: opacity .5s;
+  }
 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 98px;
+    height: 54px;
+    opacity: 0;
+    background: url(../img/icon/8.png) center center no-repeat;
+    transition: opacity .5s;
+  }
   &:hover {
     &::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: $main-color;
       opacity: 0.5;
     }
 
     &::after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
-      width: 98px;
-      height: 54px;
-      background: url(../img/icon/8.png) center center no-repeat;
+      opacity: 1;
     }
   }
 
