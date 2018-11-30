@@ -469,20 +469,22 @@ input[type="radio"] {
 
 .shop__item {
   position: relative;
+  transition: 5s;
 }
 
-.shop__item:hover::before {
+.shop__item::before {
   content: '';
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
   background-color: #64c29e;
-  opacity: 0.5;
+  transition: opacity .5s;
 }
 
-.shop__item:hover::after {
+.shop__item::after {
   content: '';
   position: absolute;
   left: 50%;
@@ -490,7 +492,17 @@ input[type="radio"] {
   transform: translate(-50%, -50%);
   width: 98px;
   height: 54px;
+  opacity: 0;
   background: url(../img/icon/8.png) center center no-repeat;
+  transition: opacity .5s;
+}
+
+.shop__item:hover::before {
+  opacity: 0.5;
+}
+
+.shop__item:hover::after {
+  opacity: 1;
 }
 
 .shop__item--1 {
